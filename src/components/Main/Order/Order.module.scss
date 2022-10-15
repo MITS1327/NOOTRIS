@@ -1,0 +1,153 @@
+.order {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #111111;
+  padding: 110px 64px;
+
+  .orderHeadings {
+    color: white;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57px;
+    margin-bottom: 85px;
+
+    .orderHeadingDescription {
+      color: #FCB500;
+    }
+  }
+
+  .orderPrice {
+    display: flex;
+    margin-bottom: 60px;
+    align-items: center;
+
+    .orderPriceOld {
+      color: #ADADAD;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 43px;
+      margin-right: 32px;
+      position: relative;
+
+      &:before {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%);
+        content: "";
+        height: 2px;
+        width: 112px;
+        position: absolute;
+        background-color: #ADADAD;
+      }
+    }
+    .orderPriceNew {
+      color: white;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 57px;
+    }
+  }
+
+  .orderContent {
+    display: flex;
+    margin-bottom: 64px;
+    flex-direction: column;
+
+    .orderList {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      @media (max-width: 1150px) {
+        flex-direction: column;
+      }
+
+      .orderLi {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &:not(:last-child) {
+          margin-right: 110px;
+
+          @media (max-width: 1150px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+
+        .orderLiImg {
+          margin-bottom: 78px;
+        }
+
+        .orderLiImgBig {
+          margin-bottom: 45px;
+        }
+
+        .orderLiHeading {
+          color: white;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 21px;
+        }
+
+        .orderLiHeadingBig {
+          color: white;
+          font-size: 36px;
+          font-weight: 400;
+          line-height: 43px;
+          margin-bottom: 8px;
+
+          @media (max-width: 500px) {
+            font-size: 20px;
+            line-height: 20px;
+          }
+        }
+
+        .orderLiDescription {
+          color: #FCB500;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 21px;
+        }
+
+        .orderLiDescriptionBig {
+          color: #FCB500;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28px;
+
+          @media (max-width: 500px) {
+            font-size: 15px;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .orderBtnBox {
+
+    .orderBtn {
+      border: none;
+      color: #000000;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 21px;
+      border-radius: 7px;
+      padding: 16px 60px;
+      background-color: #FCB500;
+
+      &:hover {
+        transition-duration: 500ms;
+        opacity: 0.8;
+      }
+
+      &:active {
+        transform: translateY(-4px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

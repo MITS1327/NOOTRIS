@@ -1,0 +1,52 @@
+.header {
+  background-color: #111111;
+  .headerMobile {
+    display: none;
+  }
+  .headerDesktop {
+    display: flex;
+    padding: 24px 64px;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+
+    .logo {
+      color: white;
+    }
+
+    .nav {
+      .navLink {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+
+        &:hover {
+          transition-duration: 500ms;
+          color: #FCB500;
+        }
+      }
+    }
+
+    .cart {
+      color: white;
+    }
+
+  }
+
+  @media (max-width: 1150px){
+    .headerDesktop {
+      display: none;
+    }
+    .headerMobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  
+}
