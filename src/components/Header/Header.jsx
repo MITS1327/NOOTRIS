@@ -3,6 +3,7 @@ import style from './Header.module.scss';
 import Logo from '../../assets/logo.svg';
 import Burger from '../../assets/icons8-menu-48.png';
 import Cart from '../../assets/basket.svg';
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -12,7 +13,9 @@ const Header = () => {
         <div className={style.header}>
             <div className={style.headerDesktop}>
                 <div className={style.logo}>
-                    <img src={Logo} alt="logo"/>
+                    <Link to="/">
+                        <img src={Logo} alt="logo"/>
+                    </Link>
                 </div>
                 <div className={style.nav}>
                     {
@@ -24,7 +27,9 @@ const Header = () => {
                     }
                 </div>
                 <div className={style.cart}>
-                    <img src={Cart} alt="Cart" />
+                    <Link to="/Cart">
+                        <img src={Cart} alt="Cart" />
+                    </Link>
                 </div>
             </div>
             <div className={style.headerMobile}>
